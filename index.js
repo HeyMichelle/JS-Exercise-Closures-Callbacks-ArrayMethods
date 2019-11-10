@@ -12,7 +12,7 @@
  * 
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
- * should return 'foofoo'.
+ * should return 'foofoo'.  
 */
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
