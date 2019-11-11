@@ -227,12 +227,14 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(runners) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  const tShirts = runners.filter(runners => (runners.shirt_size === tShirtSize));
+  return tShirts;
 }
 
 /**
- * ### Challenge `tallyUpDonations`
+ * ### Challenge `tallyUpDonations` 
+ * why do some ask for callbacks and others do not?? QUESTION FOR TL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * 
  * @instructions
  * The donations need to be tallied up and reported for tax purposes.
@@ -241,9 +243,11 @@ function getRunnersByTShirtSize(runners) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations(runners) {
+  let sum = runners.reduce((donations, y) => {return donations + y}, 0);
+  return sum;
 }
+
 
 /////////////// CLOSURES ///////////////
 /////////////// CLOSURES ///////////////
